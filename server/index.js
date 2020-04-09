@@ -13,10 +13,15 @@ const io = socketio(server);
 io.on('connection', (socket) => {
   console.log('A new connection has formed');
 
+  socket.on('join', ({ name, room }, callback) => {
+    console.log(name, room);
+    callback();
+  });
+
   socket.on('disconnect', () => {
     console.log('User has terminated connection');
-  })
-})
+  });
+});
 app.use(router);
 
 server.listen(PORT, () => console.log(`Server initialized on port ${PORT}`));
