@@ -1,7 +1,6 @@
 const users = [];
 
 const addUser = ({ id, name, room }) => {
-  // Javascript Mastery = javascriptmastery;
   name = name.trim().toLowerCase();
   room = room.trim().toLowerCase();
 
@@ -32,5 +31,5 @@ module.exports = {
   addUser,
   removeUser,
   getUser,
-  getUsersInRoom
+  getUsersInRoom,
 };
